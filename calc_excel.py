@@ -104,7 +104,7 @@ with st.form("pp_form"):
     st.markdown("**Объёмы кормлений, мл (заполните первые N по кратности):**")
     feed_volumes = []
     feed_cols = st.columns(n_feeds)
-    for i in range(7):
+    for i in range(n_feeds):
         col = feed_cols[i % n_feeds]
         disabled = i >= n_feeds
         v = col.number_input(
