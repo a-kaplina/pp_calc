@@ -129,7 +129,7 @@ with st.form("pp_form"):
 
     st.caption(
         f"Суточный объём ЭП: **{total_enter_ml:.1f} мл**  •  "
-        f"ЭП: **{dose_enter_per_kg:.1f} мл/кг/сут**  ({total_enter_ml:.1f} мл / {m:.1f} кг)"
+        f"ЭП: **{dose_enter_per_kg:.1f} мл/кг/сут**  ({total_enter_ml:.1f} мл / {m:.3f} кг)"
     )
     st.markdown(
         f"**Из ЭП за сутки (на кг):** {enter_kcal:.1f} ккал/кг • "
