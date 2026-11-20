@@ -144,7 +144,7 @@ with st.form("pp_form"):
     col1, col2, col3 = st.columns(3)
     with col1:
         st.subheader("Основное")
-        dose_liq = st.number_input("Объем жидкости (общий), мл/кг/сут", min_value=0.0, value=100.0, step=10.0)
+        dose_liq = st.number_input("Объем жидкости (общий, ЭП+ПП), мл/кг/сут", min_value=0.0, value=100.0, step=10.0)
     with col2:
         st.subheader("Нутриенты")
         dose_alb = st.number_input("Доза белка, г/кг/сут", min_value=0.0, value=1.0, step=0.5)
@@ -271,7 +271,7 @@ if submitted:
             st.metric("Магний (Sol. MgSO4 25%)", f"{res['Mg']:.1f}")
             st.metric("Солувит", f"{res['Sol']:.1f}")
             sol_rate = (dose_gluc_C1 + dose_gluc_C2 + res["daily_dose_amino_10"] + res["K"] + res["Ca"] + res["Mg"] + res["Sol"]) / 24
-            st.metric("Скорость глюкозы и электролитов, мл/ч", f"{sol_rate:.1f}")
+            st.metric("Скорость глюкозы, белка и электролитов, мл/ч", f"{sol_rate:.1f}")
             
         with c3:
             st.markdown("#### Жиры, мл")
@@ -342,7 +342,7 @@ if submitted:
             add("Объём ЭП (учитываемый)", "", round(v_enter_calc, 1), "мл")
             add("Общий объём глюкозы в инфузии", "", round(v_gluc, 1), "мл")
             add("")
-            add("Инфузия глюкозы и электролитов")
+            add("Инфузия глюкозы, белка и электролитов")
             add("Концентрация общ. р-ра глюкозы", "", round(concentrate_gluc, 1), "%")
             if C2 == C1:
                 add(f"Раствор {C1:.1f}%", "", round(v_gluc, 1), "мл")
