@@ -96,7 +96,7 @@ with st.form("pp_form"):
 
     ec1, ec2 = st.columns(2)
     with ec1:
-        m = st.number_input("Масса ребёнка, кг", min_value=0.1, value=3.0, step=0.1)
+        m = st.number_input("Масса ребёнка, кг", min_value=0.100, value=3.000, step=0.100)
         vol_per_feed = st.number_input("Объём одного кормления, мл", min_value=0.0, value=0.0, step=5.0)
     with ec2:
         n_feeds = st.number_input("Кратность кормлений в сутки", min_value=1, max_value=12, value=7, step=1)
