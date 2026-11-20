@@ -146,12 +146,12 @@ with st.form("pp_form"):
         st.subheader("Основное")
         dose_liq = st.number_input("Объем жидкости (общий, ЭП+ПП), мл/кг/сут", min_value=0.0, value=100.0, step=10.0)
     with col2:
-        st.subheader("Нутриенты")
+        st.subheader("Нутриенты (ПП)")
         dose_alb = st.number_input("Доза белка, г/кг/сут", min_value=0.0, value=1.0, step=0.5)
         dose_fat = st.number_input("Доза жира, г/кг/сут", min_value=0.0, value=0.0, step=0.5)
         SpeedC = st.number_input("Скорость введения углеводов, мг/кг/мин", min_value=0.0, value=4.0, step=0.1)
     with col3:
-        st.subheader("Электролиты")
+        st.subheader("Электролиты (ПП)")
         FPK = st.number_input("ФП калий, ммоль/кг/сут", min_value=0.0, value=0.0, step=0.5)
         FPCa = st.number_input("ФП кальций, мг/кг/сут", min_value=0.0, value=100.0, step=50.0)
         DoseNa = st.number_input("Доза натрия, ммоль/кг/сут", min_value=0.0, value=0.0, step=0.5)
