@@ -355,7 +355,7 @@ if submitted:
             add("Ca gluconatis 10%", "", round(res["Ca"], 1), "мл")
             add("MgSO4 25%", "", round(res["Mg"], 1), "мл")
             add("Солувит", "", round(res["Sol"], 1), "мл")
-            add("Скорость глюкозы и электролитов", "", round(sol_rate, 1), "мл / ч")
+            add("Скорость глюкозы, белка и электролитов", "", round(sol_rate, 1), "мл / ч")
             add("")
             add("Инфузия липидов")
             add("Жировая эмульсия 20%", "", round(res["daily_dose_emulsion_fat_20"], 1), "мл")
