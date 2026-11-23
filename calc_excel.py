@@ -147,7 +147,7 @@ with st.form("pp_form"):
         dose_liq = st.number_input("Объем жидкости (общий, ЭП+ПП), мл/кг/сут", min_value=0.0, value=60.0, step=10.0)
     with col2:
         st.subheader("Нутриенты (ПП)")
-        dose_alb = st.number_input("Доза белка, г/кг/сут", min_value=0.0, value=1.0, step=0.5)
+        dose_alb = st.number_input("Доза белка, г/кг/сут", min_value=0.0, value=0.0, step=0.5)
         dose_fat = st.number_input("Доза жира, г/кг/сут", min_value=0.0, value=0.0, step=0.5)
         SpeedC = st.number_input("Скорость введения углеводов, мг/кг/мин", min_value=0.0, value=4.0, step=0.1)
     with col3:
