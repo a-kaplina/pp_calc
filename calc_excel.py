@@ -144,7 +144,7 @@ with st.form("pp_form"):
     col1, col2, col3 = st.columns(3)
     with col1:
         st.subheader("Основное")
-        dose_liq = st.number_input("Объем жидкости (общий, ЭП+ПП), мл/кг/сут", min_value=0.0, value=100.0, step=10.0)
+        dose_liq = st.number_input("Объем жидкости (общий, ЭП+ПП), мл/кг/сут", min_value=0.0, value=60.0, step=10.0)
     with col2:
         st.subheader("Нутриенты (ПП)")
         dose_alb = st.number_input("Доза белка, г/кг/сут", min_value=0.0, value=1.0, step=0.5)
@@ -153,7 +153,7 @@ with st.form("pp_form"):
     with col3:
         st.subheader("Электролиты (ПП)")
         FPK = st.number_input("ФП калий, ммоль/кг/сут", min_value=0.0, value=0.0, step=0.5)
-        FPCa = st.number_input("ФП кальций, мг/кг/сут", min_value=0.0, value=100.0, step=50.0)
+        FPCa = st.number_input("ФП кальций, мг/кг/сут", min_value=0.0, value=0.0, step=50.0)
         DoseNa = st.number_input("Доза натрия, ммоль/кг/сут", min_value=0.0, value=0.0, step=0.5)
         DoseMg = st.number_input("Доза магния, мг/кг/сут", min_value=0.0, value=0.0, step=50.0)
         st.caption("⚠️ Растворы магния и кальция нельзя смешивать в одной капельнице - возможно выпадение осадка")
