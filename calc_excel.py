@@ -249,9 +249,9 @@ if submitted:
         c1, c2, c3 = st.columns(3)
         with c1:
             st.markdown("#### Расчетные объёмы")
-            st.metric("Общий объём жидкости, мл", f"{res['daily_dose_liq']:.1f}")
-            st.metric("Объём ПП, мл", f"{daily_dose_parent_eat:.1f}")
-            st.metric("Объём ЭП (учитываемый), мл", f"{v_enter_calc:.1f}")
+            st.metric("Общий объём жидкости, мл", f"{res['daily_dose_liq']:.1f} ({res['daily_dose_liq'] / m:.1f} мл/кг/сут)")
+            st.metric("Объём ПП, мл", f"{daily_dose_parent_eat:.1f} ({daily_dose_parent_eat / m:.1f} мл/кг/сут)")
+            st.metric("Объём ЭП (учитываемый), мл", f"{v_enter_calc:.1f} ({v_enter_calc / m:.1f} мл/кг/сут)")
             st.metric("Объём глюкозы, мл", f"{v_gluc:.1f}")
             st.metric("Концентрация общ. р-ра глюкозы, %", f"{concentrate_gluc:.1f}")
         with c2:
