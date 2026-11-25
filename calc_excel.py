@@ -101,7 +101,7 @@ with st.form("pp_form"):
     with ec2:
         n_feeds = st.number_input("Кратность кормлений в сутки", min_value=1, max_value=12, value=7, step=1)
 
-    st.markdown("**Объёмы кормлений, мл (заполните первые N по кратности):**")
+    st.markdown("**Объёмы кормлений, мл (можно уточнить объемы):**")
     feed_volumes = []
     feed_cols = st.columns(n_feeds)
     for i in range(n_feeds):
