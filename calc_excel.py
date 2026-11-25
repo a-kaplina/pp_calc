@@ -102,6 +102,7 @@ with st.form("pp_form"):
         n_feeds = st.number_input("Кратность кормлений в сутки", min_value=1, max_value=12, value=7, step=1)
 
     st.markdown("**Объёмы кормлений, мл (можно уточнить объемы):**")
+    st.caption("После внесения изменений  в ячейках не забудьте нажать Enter")
     feed_volumes = []
     feed_cols = st.columns(n_feeds)
     for i in range(n_feeds):
